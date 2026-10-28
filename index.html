@@ -4,80 +4,98 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Darkcore Soft &amp; Development</title>
-<meta name="description" content="Darkcore Soft & Development crea apps y videojuegos. Descarga Factú, nuestro programa de facturación y punto de venta, y lo que viene.">
+<meta name="description" content="Darkcore Soft & Development es un estudio que hace apps y videojuegos. Descarga Factú, nuestro programa de facturación y punto de venta, y lo que viene.">
 <meta property="og:title" content="Darkcore Soft & Development">
-<meta property="og:description" content="Apps y videojuegos. Descarga nuestros proyectos desde un solo lugar.">
+<meta property="og:description" content="Un estudio que hace apps y videojuegos. Descarga nuestros proyectos desde un solo lugar.">
 <meta property="og:image" content="img/compartir.png">
-<meta name="theme-color" content="#07090D">
+<meta name="theme-color" content="#F5F3EE" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111110" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="img/icono-64.png">
 <link rel="apple-touch-icon" href="img/icono-192.png">
+<link rel="preload" href="fuentes/InterDisplay-Medium.woff" as="font" type="font/woff" crossorigin>
 <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 <header class="barra"><div class="cont">
-  <a class="marca" href="#"><img src="img/logo.svg" alt=""><span><b>DARKCORE</b><small>SOFT &amp; DEVELOPMENT</small></span></a>
-  <nav><a href="#catalogo">Catálogo</a><a href="#nosotros">Nosotros</a><a class="bt-borde" href="#contacto">Contacto</a></nav>
+  <a class="marca" href="#" aria-label="Darkcore, inicio">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="currentColor"/><circle cx="32" cy="32" r="7" fill="#FF4D00"/></svg>darkcore</a>
+  <nav><a href="#proyectos">Proyectos</a><a class="opc" href="#estudio">Estudio</a><a href="#contacto">Contacto</a></nav>
 </div></header>
 
 <main>
 <section class="portada">
-  <div class="rejilla-fondo"></div>
   <div class="cont">
-    <span class="chip"><i></i>Factú ya está disponible</span>
-    <h1>Software y juegos con <span>núcleo propio</span>.</h1>
-    <p class="lead">En Darkcore creamos apps para negocios y videojuegos. Todo lo que hacemos lo descargas aquí, gratis o con prueba, en Windows, Android e iPhone.</p>
-    <div class="acciones">
-      <a class="bt bt-1" href="#catalogo">Ver el catálogo
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg></a>
-      <a class="bt bt-2" href="https://darwinrosado1503.github.io/factu/">Conocer Factú</a>
-    </div>
-    <div class="cifras">
-      <div><b id="n-prod">2</b><span>Proyectos</span></div>
-      <div><b>3</b><span>Plataformas</span></div>
-      <div><b>Muy pronto</b><span>Videojuegos</span></div>
+    <p class="mini aparece" style="margin:0 0 28px"><span class="punto"></span>&nbsp;&nbsp;Darkcore Soft &amp; Development</p>
+    <h1 class="aparece">Hacemos software y juegos <em class="s">que se sienten bien</em>.</h1>
+    <div class="bajo aparece">
+      <p>Somos un estudio pequeño. Creamos apps para negocios y videojuegos, y aquí los descargas todos, directo y sin registrarte.</p>
+      <div class="meta">
+        <div><b id="n-prod">2</b><span class="mini">Proyectos</span></div>
+        <div><b>3</b><span class="mini">Plataformas</span></div>
+        <div><b>2026</b><span class="mini">Desde</span></div>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="catalogo" style="padding-top:40px">
+<section id="destacado" style="padding-top:0">
   <div class="cont">
-    <div class="cab-sec">
-      <div><p class="sec-eti">Catálogo</p><h2 class="sec-t">Descarga nuestros proyectos</h2><p class="sec-d">Elige el que necesitas y bájalo directo, sin registrarte.</p></div>
-      <div class="filtros" role="group" aria-label="Filtrar el catálogo">
+    <article class="destacado aparece">
+      <div class="txt">
+        <p class="mini" style="margin:0"><span class="punto"></span>&nbsp;&nbsp;Destacado</p>
+        <h3>Factú. <em class="s">Tu negocio,</em> en orden.</h3>
+        <p>Facturación y punto de venta para Windows, con su app para el celular. Vende, factura con comprobantes y mira cuánto ganas de verdad, aunque se vaya el internet.</p>
+        <div class="ficha"><div><b>Windows</b>10 y 11</div><div><b>Factú Móvil</b>Android · iPhone</div><div><b>Prueba</b>15 días gratis</div></div>
+        <div class="acc">
+          <a class="bt bt-1" href="https://github.com/darwinrosado1503/factu/releases/latest/download/Factu-Setup.exe">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Descargar para Windows</a>
+          <a class="bt bt-2" href="https://darwinrosado1503.github.io/factu/">Conocer Factú</a>
+        </div>
+      </div>
+      <div class="vis" aria-hidden="true">
+        <img class="pc" src="productos/factu-pc.webp" alt="" loading="lazy">
+        <img class="tel" src="productos/factu-movil.webp" alt="" loading="lazy">
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="proyectos" style="padding-top:20px">
+  <div class="cont">
+    <div class="cab aparece">
+      <h2>Proyectos</h2>
+      <div class="filtros" role="group" aria-label="Filtrar proyectos">
         <button type="button" data-f="todo" aria-pressed="true">Todo</button>
         <button type="button" data-f="app" aria-pressed="false">Apps</button>
         <button type="button" data-f="juego" aria-pressed="false">Videojuegos</button>
       </div>
     </div>
-    <div class="catalogo" id="lista" aria-live="polite"></div>
+    <div class="indice" id="lista" aria-live="polite"></div>
   </div>
 </section>
 
-<section id="nosotros">
-  <div class="cont">
-    <p class="sec-eti">Nosotros</p>
-    <h2 class="sec-t">Un estudio pequeño que termina lo que empieza</h2>
-    <p class="sec-d" style="margin-bottom:36px">Hacemos programas que la gente usa todos los días y juegos para cuando se acaba el día.</p>
-    <div class="tres">
-      <div class="caja"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><h3>Apps para negocios</h3><p>Herramientas para vender, facturar y llevar las cuentas, pensadas para el mostrador y no para expertos.</p></div>
-      <div class="caja"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 11v3M5.5 12.5h3"/><circle cx="16" cy="11.5" r="1"/><circle cx="18" cy="13.5" r="1"/></svg></div><h3>Videojuegos</h3><p>Nuestros primeros juegos están en camino. Cuando salgan, los vas a poder bajar desde esta misma página.</p></div>
-      <div class="caja"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Tus datos son tuyos</h3><p>Sin publicidad ni rastreo. Lo que guardas en nuestras apps se queda en tus equipos.</p></div>
+<section id="estudio">
+  <div class="cont estudio">
+    <div class="aparece">
+      <p class="mini" style="margin:0 0 18px">Estudio</p>
+      <h2>Pocas cosas, <em class="s">bien hechas.</em></h2>
+    </div>
+    <div class="principios aparece">
+      <div class="principio"><span>01</span><div><h3>Útil desde el primer día</h3><p>Hacemos programas que se entienden sin manual y resuelven el trabajo de todos los días.</p></div></div>
+      <div class="principio"><span>02</span><div><h3>Tus datos son tuyos</h3><p>Sin publicidad ni rastreo. Lo que guardas en nuestras apps se queda en tus equipos.</p></div></div>
+      <div class="principio"><span>03</span><div><h3>Juegos en camino</h3><p>Estamos trabajando en nuestros primeros videojuegos. Cuando salgan, los descargas aquí mismo.</p></div></div>
     </div>
   </div>
 </section>
 
-<section id="contacto" style="padding-top:0">
-  <div class="cont">
-    <div class="contacto">
-      <p class="sec-eti">Contacto</p>
-      <h2 class="sec-t">¿Tienes una pregunta o una idea?</h2>
-      <p class="sec-d">Escríbenos por WhatsApp para comprar una licencia, pedir ayuda o proponernos un proyecto.</p>
-      <div class="acciones">
-        <a class="bt bt-1" href="https://wa.me/14153121667?text=Hola%20Darkcore">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.3-4.4A9 9 0 1 1 21 12z"/></svg>
-          Escribir por WhatsApp</a>
-        <span class="bt bt-2 mono" style="cursor:default">+1 415-312-1667</span>
-      </div>
+<section id="contacto" class="contacto">
+  <div class="cont aparece">
+    <p class="mini" style="margin:0 0 18px">Contacto</p>
+    <a class="grande" href="https://wa.me/14153121667?text=Hola%20Darkcore">Hablemos<span class="punto"></span></a>
+    <div class="datos">
+      <div><b>WhatsApp</b><a href="https://wa.me/14153121667">+1 415-312-1667</a></div>
+      <div><b>Licencias y soporte</b>Compra, activación y ayuda</div>
+      <div><b>Proyectos</b>¿Tienes una idea? Cuéntanos</div>
     </div>
   </div>
 </section>
@@ -94,31 +112,37 @@
   document.getElementById('anio').textContent=new Date().getFullYear();
   const lista=document.getElementById('lista');
   const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const ICO={descarga:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>'};
+  const BAJAR='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>';
+  const IR='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg>';
   const TIPOS={app:'App',juego:'Videojuego'};
   let todos=[],filtro='todo';
-  function tarjeta(p){
-    const desc=(p.descargas||[]).map((d,i)=>d.pronto
-      ?`<span class="bt bt-2 bt-pronto">${esc(d.plataforma)} · pronto</span>`
-      :`<a class="bt ${i===0?'bt-1':'bt-2'}" href="${esc(d.url)}">${ICO.descarga}${esc(d.plataforma)}</a>`).join('');
-    return `<article class="prod">
-      <div class="prod-img ${p.imagenVertical?'vertical':''}"><img src="${esc(p.imagen)}" alt="" loading="lazy"><span class="prod-tipo">${esc(TIPOS[p.tipo]||p.tipo)}</span>${p.etiqueta?`<span class="eti">${esc(p.etiqueta)}</span>`:''}</div>
-      <div class="prod-cuerpo">
-        <div class="prod-cab"><img src="${esc(p.icono)}" alt=""><div><h3>${esc(p.nombre)}</h3><p>${esc(p.lema)}</p></div></div>
-        <p class="prod-desc">${esc(p.descripcion)}</p>
-        <div class="plats">${(p.plataformas||[]).map(x=>`<span>${esc(x)}</span>`).join('')}</div>
-        <div class="prod-pie">${desc}${p.pagina?`<a class="bt bt-2" href="${esc(p.pagina)}">Ver más</a>`:''}</div>
-      </div></article>`;}
-  const pronto=t=>`<article class="prod pronto"><div><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 11v3M5.5 12.5h3"/><circle cx="16" cy="11.5" r="1"/><circle cx="18" cy="13.5" r="1"/></svg></div>
-    <h3>${t==='juego'?'Nuestros videojuegos vienen en camino':'Más proyectos en camino'}</h3><p>Estamos trabajando en lo próximo. Cuando esté listo, aparece aquí para descargar.</p></div></article>`;
+  function fila(p,i){
+    const d=(p.descargas||[]).filter(x=>!x.pronto);
+    const pronto=(p.descargas||[]).filter(x=>x.pronto).map(x=>x.plataforma);
+    return `<div class="fila">
+      <span class="n">${String(i+1).padStart(2,'0')}</span>
+      <img src="${esc(p.icono)}" alt="">
+      <div><h3>${esc(p.nombre)}</h3><p>${esc(p.lema)}</p></div>
+      <div class="col"><b>Tipo</b>${esc(TIPOS[p.tipo]||p.tipo)}${p.etiqueta?` · ${esc(p.etiqueta)}`:''}</div>
+      <div class="col"><b>Plataformas</b>${esc((p.plataformas||[]).join(' · '))}${pronto.length?`<br><span style="color:var(--tenue)">${esc(pronto.join(' y '))} muy pronto</span>`:''}</div>
+      <div class="acc">${d.map((x,k)=>`<a class="bt ${k===0?'bt-1':'bt-2'}" href="${esc(x.url)}">${BAJAR}${esc(x.plataforma)}</a>`).join('')}${p.pagina?`<a class="bt bt-2" href="${esc(p.pagina)}" aria-label="Ver más de ${esc(p.nombre)}">Ver más ${IR}</a>`:''}</div>
+    </div>`;}
+  const proximo=i=>`<div class="fila pronto">
+      <span class="n">${String(i+1).padStart(2,'0')}</span>
+      <span class="ph"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 11v3M5.5 12.5h3"/><circle cx="16" cy="11.5" r=".8"/><circle cx="18" cy="13.5" r=".8"/></svg></span>
+      <div><h3>Nuestros primeros videojuegos</h3><p>En desarrollo. Aparecerán aquí para descargar.</p></div>
+      <div class="col"><b>Tipo</b>Videojuego</div><div class="col"><b>Estado</b>En camino</div>
+      <div class="acc"><span class="pild">Muy pronto</span></div></div>`;
   function pintar(){
-    const L=todos.filter(p=>filtro==='todo'||p.tipo===filtro);
-    const hayJuegos=todos.some(p=>p.tipo==='juego');
-    lista.innerHTML=L.map(tarjeta).join('')+((filtro==='juego'&&!L.length)||(filtro==='todo'&&!hayJuegos)?pronto('juego'):'')||'<div class="vacio">No hay proyectos en esta categoría todavía.</div>';}
+    const L=todos.filter(p=>filtro==='todo'||p.tipo===filtro),hayJuegos=todos.some(p=>p.tipo==='juego');
+    lista.innerHTML=L.map(fila).join('')+((filtro!=='app'&&!hayJuegos)?proximo(L.length):'');}
   document.querySelector('.filtros').addEventListener('click',e=>{const b=e.target.closest('[data-f]');if(!b)return;filtro=b.dataset.f;
     document.querySelectorAll('.filtros button').forEach(x=>x.setAttribute('aria-pressed',x===b));pintar();});
   fetch('productos.json',{cache:'no-cache'}).then(r=>r.json()).then(j=>{todos=j.productos||[];document.getElementById('n-prod').textContent=todos.length;pintar();})
-    .catch(()=>{lista.innerHTML='<div class="vacio">No se pudo cargar el catálogo. Recarga la página.</div>';});
+    .catch(()=>{lista.innerHTML='<p style="color:var(--gris);padding:24px 0">No se pudo cargar la lista de proyectos. Recarga la página.</p>';});
+  // Aparición suave al bajar
+  const io='IntersectionObserver' in window?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visto');io.unobserve(e.target);}}),{threshold:.12}):null;
+  document.querySelectorAll('.aparece').forEach(el=>io?io.observe(el):el.classList.add('visto'));
 })();
 </script>
 </body>
