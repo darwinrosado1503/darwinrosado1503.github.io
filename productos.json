@@ -1,0 +1,39 @@
+{
+  "productos": [
+    {
+      "id": "factu",
+      "nombre": "Factú",
+      "tipo": "app",
+      "lema": "Facturación y punto de venta",
+      "descripcion": "Vende, factura con comprobantes, controla inventario, caja, gastos y ganancias. Funciona sin internet.",
+      "plataformas": ["Windows"],
+      "icono": "productos/factu-icono.png",
+      "imagen": "productos/factu-pc.webp",
+      "estado": "disponible",
+      "etiqueta": "Prueba gratis 15 días",
+      "pagina": "https://darwinrosado1503.github.io/factu/",
+      "descargas": [
+        {"plataforma": "Windows", "url": "https://github.com/darwinrosado1503/factu/releases/latest/download/Factu-Setup.exe"}
+      ]
+    },
+    {
+      "id": "factu-movil",
+      "nombre": "Factú Móvil",
+      "tipo": "app",
+      "lema": "Tu punto de venta en el bolsillo",
+      "descripcion": "Vende, cobra e imprime desde el celular o la tablet, conectado a Factú en la PC por el Wi-Fi del negocio.",
+      "plataformas": ["Android", "iPhone", "iPad"],
+      "icono": "productos/factu-icono.png",
+      "imagen": "productos/factu-movil.webp",
+      "imagenVertical": true,
+      "estado": "disponible",
+      "etiqueta": "Gratis",
+      "pagina": "https://darwinrosado1503.github.io/factu/#movil",
+      "descargas": [
+        {"plataforma": "Android", "url": "https://github.com/darwinrosado1503/factu/releases/latest/download/Factu-Movil.apk"},
+        {"plataforma": "Google Play", "pronto": true},
+        {"plataforma": "App Store", "pronto": true}
+      ]
+    }
+  ]
+}
