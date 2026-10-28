@@ -4,13 +4,17 @@
       "id": "factu",
       "nombre": "Factú",
       "tipo": "app",
+      "destacado": true,
       "lema": "Facturación y punto de venta",
-      "descripcion": "Vende, factura con comprobantes, controla inventario, caja, gastos y ganancias. Funciona sin internet.",
-      "plataformas": ["Windows"],
+      "descripcion": "Facturación y punto de venta para tu negocio, en la PC y el celular. Funciona sin internet.",
+      "detalle": "Vende con lector de códigos, cobra en efectivo, tarjeta, transferencia o a crédito, y factura con comprobantes fiscales. Lleva el inventario, la caja, los gastos y tus ganancias reales. Conecta celulares y tablets con Factú Móvil por el Wi-Fi del negocio.",
+      "plataformas": ["Windows 10 y 11"],
       "icono": "productos/factu-icono.png",
-      "imagen": "productos/factu-pc.webp",
-      "estado": "disponible",
-      "etiqueta": "Prueba gratis 15 días",
+      "portada": "productos/factu-pc.webp",
+      "celular": "productos/factu-movil.webp",
+      "capturas": ["productos/factu-pc.webp", "productos/factu-pos.webp"],
+      "precio": "15 días gratis",
+      "precioEtiqueta": "Prueba",
       "pagina": "https://darwinrosado1503.github.io/factu/",
       "descargas": [
         {"plataforma": "Windows", "url": "https://github.com/darwinrosado1503/factu/releases/latest/download/Factu-Setup.exe"}
@@ -20,14 +24,17 @@
       "id": "factu-movil",
       "nombre": "Factú Móvil",
       "tipo": "app",
+      "destacado": true,
       "lema": "Tu punto de venta en el bolsillo",
-      "descripcion": "Vende, cobra e imprime desde el celular o la tablet, conectado a Factú en la PC por el Wi-Fi del negocio.",
+      "descripcion": "Vende, cobra e imprime desde el celular o la tablet, conectado a Factú en la PC.",
+      "detalle": "Escanea con la cámara, imprime por Bluetooth y comparte la factura en PDF por WhatsApp. Ve ventas, inventario, clientes, gastos, ganancias y cierres de caja desde donde estés en el local. Trae un modo de demostración para probarla sin PC.",
       "plataformas": ["Android", "iPhone", "iPad"],
       "icono": "productos/factu-icono.png",
-      "imagen": "productos/factu-movil.webp",
-      "imagenVertical": true,
-      "estado": "disponible",
-      "etiqueta": "Gratis",
+      "portada": "productos/factu-movil.webp",
+      "vertical": true,
+      "capturas": ["productos/factu-movil.webp", "productos/movil-2-vender.webp", "productos/movil-5-productos.webp", "productos/movil-6-ganancias.webp"],
+      "precio": "Gratis",
+      "precioEtiqueta": "Precio",
       "pagina": "https://darwinrosado1503.github.io/factu/#movil",
       "descargas": [
         {"plataforma": "Android", "url": "https://github.com/darwinrosado1503/factu/releases/latest/download/Factu-Movil.apk"},
@@ -35,5 +42,14 @@
         {"plataforma": "App Store", "pronto": true}
       ]
     }
+  ],
+  "proximos": [
+    {"nombre": "Videojuego 01", "tipo": "juego", "nota": "En desarrollo"},
+    {"nombre": "Videojuego 02", "tipo": "juego", "nota": "En desarrollo"},
+    {"nombre": "Nueva app", "tipo": "app", "nota": "En desarrollo"}
+  ],
+  "novedades": [
+    {"fecha": "2026-10-28", "titulo": "Factú 1.13: prueba gratis y actualizaciones automáticas", "texto": "Ahora Factú se instala con un solo archivo, trae 15 días de prueba y se actualiza solo.", "producto": "factu"},
+    {"fecha": "2026-10-27", "titulo": "Factú Móvil 1.7 con modo demostración", "texto": "Prueba la app sin PC con un negocio de ejemplo. Muy pronto en Google Play y App Store.", "producto": "factu-movil"}
   ]
 }

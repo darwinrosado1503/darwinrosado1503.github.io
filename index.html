@@ -4,145 +4,160 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Darkcore Soft &amp; Development</title>
-<meta name="description" content="Darkcore Soft & Development es un estudio que hace apps y videojuegos. Descarga Factú, nuestro programa de facturación y punto de venta, y lo que viene.">
+<meta name="description" content="Darkcore Soft & Development: apps y videojuegos. Descarga Factú, nuestro programa de facturación y punto de venta, y lo que viene.">
 <meta property="og:title" content="Darkcore Soft & Development">
-<meta property="og:description" content="Un estudio que hace apps y videojuegos. Descarga nuestros proyectos desde un solo lugar.">
+<meta property="og:description" content="Apps y videojuegos. Descarga nuestros proyectos desde un solo lugar.">
 <meta property="og:image" content="img/compartir.png">
-<meta name="theme-color" content="#F5F3EE" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#111110" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#070A11">
 <link rel="icon" href="img/icono-64.png">
 <link rel="apple-touch-icon" href="img/icono-192.png">
-<link rel="preload" href="fuentes/InterDisplay-Medium.woff" as="font" type="font/woff" crossorigin>
 <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-<header class="barra"><div class="cont">
-  <a class="marca" href="#" aria-label="Darkcore, inicio">
-    <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="currentColor"/><circle cx="32" cy="32" r="7" fill="#FF4D00"/></svg>darkcore</a>
-  <nav><a href="#proyectos">Proyectos</a><a class="opc" href="#estudio">Estudio</a><a href="#contacto">Contacto</a></nav>
+<header class="barra"><div class="envolver">
+  <a class="marca" href="#" aria-label="Darkcore, inicio"><img src="img/logo.svg" alt="">DARKCORE</a>
+  <nav class="menu" aria-label="Secciones">
+    <a href="#" class="on" data-ir="inicio">Inicio</a>
+    <a href="#apps" data-ir="apps">Apps</a>
+    <a href="#juegos" data-ir="juegos">Videojuegos</a>
+    <a href="#novedades" data-ir="novedades">Novedades</a>
+  </nav>
+  <label class="buscar">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+    <input id="q" type="search" placeholder="Buscar en Darkcore…" autocomplete="off" aria-label="Buscar apps y juegos">
+  </label>
 </div></header>
 
-<main>
-<section class="portada">
-  <div class="cont">
-    <p class="mini aparece" style="margin:0 0 28px"><span class="punto"></span>&nbsp;&nbsp;Darkcore Soft &amp; Development</p>
-    <h1 class="aparece">Hacemos software y juegos <em class="s">que se sienten bien</em>.</h1>
-    <div class="bajo aparece">
-      <p>Somos un estudio pequeño. Creamos apps para negocios y videojuegos, y aquí los descargas todos, directo y sin registrarte.</p>
-      <div class="meta">
-        <div><b id="n-prod">2</b><span class="mini">Proyectos</span></div>
-        <div><b>3</b><span class="mini">Plataformas</span></div>
-        <div><b>2026</b><span class="mini">Desde</span></div>
-      </div>
-    </div>
-  </div>
-</section>
+<main class="envolver">
+  <section class="banner" id="banner" aria-roledescription="carrusel" aria-label="Destacados"></section>
 
-<section id="destacado" style="padding-top:0">
-  <div class="cont">
-    <article class="destacado aparece">
-      <div class="txt">
-        <p class="mini" style="margin:0"><span class="punto"></span>&nbsp;&nbsp;Destacado</p>
-        <h3>Factú. <em class="s">Tu negocio,</em> en orden.</h3>
-        <p>Facturación y punto de venta para Windows, con su app para el celular. Vende, factura con comprobantes y mira cuánto ganas de verdad, aunque se vaya el internet.</p>
-        <div class="ficha"><div><b>Windows</b>10 y 11</div><div><b>Factú Móvil</b>Android · iPhone</div><div><b>Prueba</b>15 días gratis</div></div>
-        <div class="acc">
-          <a class="bt bt-1" href="https://github.com/darwinrosado1503/factu/releases/latest/download/Factu-Setup.exe">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Descargar para Windows</a>
-          <a class="bt bt-2" href="https://darwinrosado1503.github.io/factu/">Conocer Factú</a>
-        </div>
-      </div>
-      <div class="vis" aria-hidden="true">
-        <img class="pc" src="productos/factu-pc.webp" alt="" loading="lazy">
-        <img class="tel" src="productos/factu-movil.webp" alt="" loading="lazy">
-      </div>
-    </article>
-  </div>
-</section>
+  <section class="estante" id="resultados" hidden>
+    <h2><span id="res-t">Resultados</span><a href="#" id="res-x">Limpiar búsqueda</a></h2>
+    <div class="cartas" id="res-l"></div>
+  </section>
 
-<section id="proyectos" style="padding-top:20px">
-  <div class="cont">
-    <div class="cab aparece">
-      <h2>Proyectos</h2>
-      <div class="filtros" role="group" aria-label="Filtrar proyectos">
-        <button type="button" data-f="todo" aria-pressed="true">Todo</button>
-        <button type="button" data-f="app" aria-pressed="false">Apps</button>
-        <button type="button" data-f="juego" aria-pressed="false">Videojuegos</button>
-      </div>
-    </div>
-    <div class="indice" id="lista" aria-live="polite"></div>
+  <div id="estantes">
+    <section class="estante" id="apps"><h2>Apps <a href="#apps">Ver todo →</a></h2><div class="cartas" id="l-apps"></div></section>
+    <section class="estante" id="juegos"><h2>Videojuegos <a href="#juegos">Ver todo →</a></h2><div class="cartas" id="l-juegos"></div></section>
+    <section class="estante" id="novedades"><h2>Novedades</h2><div class="novedades" id="l-nov"></div></section>
   </div>
-</section>
 
-<section id="estudio">
-  <div class="cont estudio">
-    <div class="aparece">
-      <p class="mini" style="margin:0 0 18px">Estudio</p>
-      <h2>Pocas cosas, <em class="s">bien hechas.</em></h2>
-    </div>
-    <div class="principios aparece">
-      <div class="principio"><span>01</span><div><h3>Útil desde el primer día</h3><p>Hacemos programas que se entienden sin manual y resuelven el trabajo de todos los días.</p></div></div>
-      <div class="principio"><span>02</span><div><h3>Tus datos son tuyos</h3><p>Sin publicidad ni rastreo. Lo que guardas en nuestras apps se queda en tus equipos.</p></div></div>
-      <div class="principio"><span>03</span><div><h3>Juegos en camino</h3><p>Estamos trabajando en nuestros primeros videojuegos. Cuando salgan, los descargas aquí mismo.</p></div></div>
-    </div>
+  <div class="franja">
+    <section class="bloque" id="nosotros">
+      <span class="eti">Darkcore Soft &amp; Development</span>
+      <h2>Apps y videojuegos con núcleo propio</h2>
+      <p>Somos un estudio que crea programas para negocios y videojuegos. Todo lo que hacemos lo descargas aquí, directo y sin registrarte.</p>
+      <div class="datos"><div><b id="n-prod">2</b><span>Proyectos publicados</span></div><div><b>3</b><span>Plataformas</span></div><div><b>Muy pronto</b><span>Videojuegos</span></div></div>
+    </section>
+    <section class="bloque oro" id="contacto">
+      <span class="eti">Contacto</span>
+      <h2>¿Una pregunta o una idea?</h2>
+      <p>Escríbenos para comprar una licencia, pedir ayuda o proponernos un proyecto.</p>
+      <div class="acciones"><a class="bt bt-oro" href="https://wa.me/14153121667?text=Hola%20Darkcore">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.3-4.4A9 9 0 1 1 21 12z"/></svg>WhatsApp</a>
+        <span class="precio">Escríbenos al<b class="mono" style="color:var(--tinta)">+1 415-312-1667</b></span></div>
+    </section>
   </div>
-</section>
-
-<section id="contacto" class="contacto">
-  <div class="cont aparece">
-    <p class="mini" style="margin:0 0 18px">Contacto</p>
-    <a class="grande" href="https://wa.me/14153121667?text=Hola%20Darkcore">Hablemos<span class="punto"></span></a>
-    <div class="datos">
-      <div><b>WhatsApp</b><a href="https://wa.me/14153121667">+1 415-312-1667</a></div>
-      <div><b>Licencias y soporte</b>Compra, activación y ayuda</div>
-      <div><b>Proyectos</b>¿Tienes una idea? Cuéntanos</div>
-    </div>
-  </div>
-</section>
 </main>
 
-<footer><div class="cont">
+<footer><div class="envolver">
+  <a class="marca" href="#" style="font-size:13px"><img src="img/logo.svg" alt="" style="width:24px;height:24px">DARKCORE</a>
   <span>© <span id="anio">2026</span> Darkcore Soft &amp; Development</span>
-  <nav><a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a></nav>
+  <nav><a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a><a href="https://wa.me/14153121667">Soporte</a></nav>
 </div></footer>
 
 <script>
 (function(){
   'use strict';
-  document.getElementById('anio').textContent=new Date().getFullYear();
-  const lista=document.getElementById('lista');
+  const $=s=>document.querySelector(s);
   const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const BAJAR='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>';
-  const IR='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg>';
-  const TIPOS={app:'App',juego:'Videojuego'};
-  let todos=[],filtro='todo';
-  function fila(p,i){
-    const d=(p.descargas||[]).filter(x=>!x.pronto);
-    const pronto=(p.descargas||[]).filter(x=>x.pronto).map(x=>x.plataforma);
-    return `<div class="fila">
-      <span class="n">${String(i+1).padStart(2,'0')}</span>
-      <img src="${esc(p.icono)}" alt="">
-      <div><h3>${esc(p.nombre)}</h3><p>${esc(p.lema)}</p></div>
-      <div class="col"><b>Tipo</b>${esc(TIPOS[p.tipo]||p.tipo)}${p.etiqueta?` · ${esc(p.etiqueta)}`:''}</div>
-      <div class="col"><b>Plataformas</b>${esc((p.plataformas||[]).join(' · '))}${pronto.length?`<br><span style="color:var(--tenue)">${esc(pronto.join(' y '))} muy pronto</span>`:''}</div>
-      <div class="acc">${d.map((x,k)=>`<a class="bt ${k===0?'bt-1':'bt-2'}" href="${esc(x.url)}">${BAJAR}${esc(x.plataforma)}</a>`).join('')}${p.pagina?`<a class="bt bt-2" href="${esc(p.pagina)}" aria-label="Ver más de ${esc(p.nombre)}">Ver más ${IR}</a>`:''}</div>
-    </div>`;}
-  const proximo=i=>`<div class="fila pronto">
-      <span class="n">${String(i+1).padStart(2,'0')}</span>
-      <span class="ph"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 11v3M5.5 12.5h3"/><circle cx="16" cy="11.5" r=".8"/><circle cx="18" cy="13.5" r=".8"/></svg></span>
-      <div><h3>Nuestros primeros videojuegos</h3><p>En desarrollo. Aparecerán aquí para descargar.</p></div>
-      <div class="col"><b>Tipo</b>Videojuego</div><div class="col"><b>Estado</b>En camino</div>
-      <div class="acc"><span class="pild">Muy pronto</span></div></div>`;
-  function pintar(){
-    const L=todos.filter(p=>filtro==='todo'||p.tipo===filtro),hayJuegos=todos.some(p=>p.tipo==='juego');
-    lista.innerHTML=L.map(fila).join('')+((filtro!=='app'&&!hayJuegos)?proximo(L.length):'');}
-  document.querySelector('.filtros').addEventListener('click',e=>{const b=e.target.closest('[data-f]');if(!b)return;filtro=b.dataset.f;
-    document.querySelectorAll('.filtros button').forEach(x=>x.setAttribute('aria-pressed',x===b));pintar();});
-  fetch('productos.json',{cache:'no-cache'}).then(r=>r.json()).then(j=>{todos=j.productos||[];document.getElementById('n-prod').textContent=todos.length;pintar();})
-    .catch(()=>{lista.innerHTML='<p style="color:var(--gris);padding:24px 0">No se pudo cargar la lista de proyectos. Recarga la página.</p>';});
-  // Aparición suave al bajar
-  const io='IntersectionObserver' in window?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visto');io.unobserve(e.target);}}),{threshold:.12}):null;
-  document.querySelectorAll('.aparece').forEach(el=>io?io.observe(el):el.classList.add('visto'));
+  const I={bajar:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>',
+    izq:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></svg>',
+    der:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>',
+    x:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>'};
+  const TIPO={app:'App',juego:'Videojuego'};
+  const fecha=f=>{const d=new Date(f+'T12:00:00');return d.toLocaleDateString('es',{day:'numeric',month:'short',year:'numeric'}).toUpperCase();};
+  $('#anio').textContent=new Date().getFullYear();
+  let D={productos:[],proximos:[],novedades:[]};
+  const prod=id=>D.productos.find(p=>p.id===id);
+  const descargaPrincipal=p=>(p.descargas||[]).find(d=>!d.pronto);
+
+  // ---------- Banner con los destacados ----------
+  let slide=0,timer=null;const DUR=7000;
+  function banner(){
+    const L=D.productos.filter(p=>p.destacado);if(!L.length){$('#banner').hidden=true;return;}
+    $('#banner').innerHTML=L.map((p,i)=>{const d=descargaPrincipal(p);
+      const vis=p.vertical?`<img class="tel" src="${esc(p.portada)}" alt="">${p.capturas&&p.capturas[1]?`<img class="tel2" src="${esc(p.capturas[1])}" alt="">`:''}`
+        :`<img class="pc" src="${esc(p.portada)}" alt="">${p.celular?`<img class="tel" src="${esc(p.celular)}" alt="">`:''}`;
+      return `<div class="slide ${p.vertical?'vert':''}" role="group" aria-roledescription="destacado" aria-label="${i+1} de ${L.length}"><div class="fondo"></div>${vis}
+        <div class="txt"><div class="eti">Destacado · ${p.precio==='Gratis'?'Gratis':'Disponible ahora'}</div><h1>${esc(p.nombre)}</h1><p>${esc(p.descripcion)}</p>
+        <div class="acciones">${d?`<a class="bt bt-oro" href="${esc(d.url)}">${I.bajar}Descargar ${d.plataforma==='Windows'&&p.precio!=='Gratis'?'gratis':'para '+esc(d.plataforma)}</a>`:''}
+        <button class="bt bt-gris" data-ficha="${esc(p.id)}">Ver detalles</button>
+        ${p.precio?`<span class="precio">${esc(p.precioEtiqueta||'Precio')}<b>${esc(p.precio)}</b></span>`:''}</div></div></div>`;}).join('')
+      +`<div class="puntos">${L.map((_,i)=>`<button aria-label="Destacado ${i+1}" data-s="${i}"></button>`).join('')}</div>`
+      +(L.length>1?`<div class="flechas"><button aria-label="Anterior" data-m="-1">${I.izq}</button><button aria-label="Siguiente" data-m="1">${I.der}</button></div>`:'');
+    ir(0);}
+  function ir(n){const S=[...document.querySelectorAll('.slide')],P=[...document.querySelectorAll('.puntos button')];if(!S.length)return;
+    slide=(n+S.length)%S.length;S.forEach((s,i)=>s.classList.toggle('on',i===slide));
+    P.forEach((b,i)=>{b.classList.remove('on');void b.offsetWidth;b.classList.toggle('on',i===slide);});
+    document.documentElement.style.setProperty('--t',DUR+'ms');clearTimeout(timer);if(S.length>1)timer=setTimeout(()=>ir(slide+1),DUR);}
+  $('#banner').addEventListener('click',e=>{const s=e.target.closest('[data-s]'),m=e.target.closest('[data-m]');if(s)ir(+s.dataset.s);if(m)ir(slide+ +m.dataset.m);});
+  $('#banner').addEventListener('mouseenter',()=>clearTimeout(timer));
+  $('#banner').addEventListener('mouseleave',()=>ir(slide));
+
+  // ---------- Estantes ----------
+  const carta=p=>`<button class="carta" data-ficha="${esc(p.id)}"><div class="im ${p.vertical?'vert':''}"><img src="${esc(p.portada)}" alt="" loading="lazy"></div>
+    <div class="t"><b>${esc(p.nombre)}</b><span>${esc(TIPO[p.tipo]||p.tipo)} · ${esc((p.plataformas||[]).join(' · '))}</span>
+    <div class="pr"><span>${esc(p.lema)}</span>${p.precio?`<em>${esc(p.precio)}</em>`:''}</div></div></button>`;
+  const proximo=x=>`<div class="carta pronto" aria-label="${esc(x.nombre)}, próximamente"><div class="im">PRÓXIMAMENTE</div><div class="t"><b>${esc(x.nombre)}</b><span>${esc(x.nota||'En desarrollo')}</span></div></div>`;
+  function estantes(){
+    const apps=D.productos.filter(p=>p.tipo==='app'),juegos=D.productos.filter(p=>p.tipo==='juego');
+    const pa=D.proximos.filter(x=>x.tipo==='app'),pj=D.proximos.filter(x=>x.tipo==='juego');
+    $('#l-apps').innerHTML=apps.map(carta).join('')+pa.map(proximo).join('');
+    $('#l-juegos').innerHTML=juegos.map(carta).join('')+pj.map(proximo).join('')||'<div class="sin">Nuestros primeros videojuegos vienen en camino.</div>';
+    $('#l-nov').innerHTML=D.novedades.map(n=>{const p=prod(n.producto);return `<button class="nov" ${p?`data-ficha="${esc(p.id)}"`:''}>${p?`<img src="${esc(p.portada)}" alt="">`:''}<div><small>${esc(fecha(n.fecha))}</small><b>${esc(n.titulo)}</b><p>${esc(n.texto)}</p></div></button>`;}).join('');
+    $('#n-prod').textContent=D.productos.length;}
+
+  // ---------- Búsqueda ----------
+  const norm=s=>String(s||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
+  function buscar(){const q=norm($('#q').value.trim());$('#resultados').hidden=!q;$('#estantes').hidden=!!q;$('#banner').hidden=!!q;if(!q)return;
+    const L=D.productos.filter(p=>norm([p.nombre,p.lema,p.descripcion,p.tipo,TIPO[p.tipo],...(p.plataformas||[])].join(' ')).includes(q));
+    $('#res-t').textContent=L.length?`Resultados para “${$('#q').value.trim()}”`:'Sin resultados';
+    $('#res-l').innerHTML=L.map(carta).join('')||`<div class="sin">No encontramos nada con “${esc($('#q').value.trim())}”. Prueba con otro nombre.</div>`;}
+  $('#q').addEventListener('input',buscar);
+  $('#res-x').addEventListener('click',e=>{e.preventDefault();$('#q').value='';buscar();$('#q').focus();});
+
+  // ---------- Ficha del producto ----------
+  let previo=null;
+  function ficha(id){const p=prod(id);if(!p)return;previo=document.activeElement;
+    const caps=p.capturas&&p.capturas.length?p.capturas:[p.portada];
+    const f=document.createElement('div');f.className='ficha-fondo';f.setAttribute('role','dialog');f.setAttribute('aria-modal','true');f.setAttribute('aria-label',p.nombre);
+    f.innerHTML=`<div class="ficha"><div class="cab"><img src="${esc(p.icono)}" alt=""><div><h2>${esc(p.nombre)}</h2><p>${esc(p.lema)}</p></div><button class="cerrar" aria-label="Cerrar">${I.x}</button></div>
+      <div class="cuerpo"><div class="galeria"><div class="grande"><img id="f-g" src="${esc(caps[0])}" alt="Captura de ${esc(p.nombre)}"></div>
+        ${caps.length>1?`<div class="minis">${caps.map((c,i)=>`<button data-c="${esc(c)}" class="${i?'':'on'}" aria-label="Captura ${i+1}"><img src="${esc(c)}" alt=""></button>`).join('')}</div>`:''}</div>
+      <div class="lado"><p>${esc(p.detalle||p.descripcion)}</p>
+        <div class="fila"><span>Tipo</span><b>${esc(TIPO[p.tipo]||p.tipo)}</b></div>
+        <div class="fila"><span>Plataformas</span><b>${esc((p.plataformas||[]).join(', '))}</b></div>
+        ${p.precio?`<div class="fila"><span>${esc(p.precioEtiqueta||'Precio')}</span><b style="color:var(--verde)">${esc(p.precio)}</b></div>`:''}
+        <div class="fila"><span>Desarrollador</span><b>Darkcore</b></div>
+        <div class="bts">${(p.descargas||[]).map(d=>d.pronto?`<span class="bt bt-off">${esc(d.plataforma)} · muy pronto</span>`:`<a class="bt bt-oro" href="${esc(d.url)}">${I.bajar}Descargar para ${esc(d.plataforma)}</a>`).join('')}
+        ${p.pagina?`<a class="bt bt-gris" href="${esc(p.pagina)}">Página de ${esc(p.nombre)}</a>`:''}</div></div></div></div>`;
+    document.body.appendChild(f);document.body.style.overflow='hidden';requestAnimationFrame(()=>f.classList.add('on'));f.querySelector('.cerrar').focus();
+    const cerrar=()=>{f.classList.remove('on');setTimeout(()=>f.remove(),200);document.body.style.overflow='';document.removeEventListener('keydown',tecla);if(previo)previo.focus();if(location.hash==='#'+p.id)history.replaceState(null,'',location.pathname);};
+    const tecla=e=>{if(e.key==='Escape')cerrar();};document.addEventListener('keydown',tecla);
+    f.addEventListener('click',e=>{if(e.target===f||e.target.closest('.cerrar'))cerrar();const b=e.target.closest('[data-c]');if(b){f.querySelector('#f-g').src=b.dataset.c;f.querySelectorAll('[data-c]').forEach(x=>x.classList.toggle('on',x===b));}});
+    history.replaceState(null,'','#'+p.id);}
+  document.addEventListener('click',e=>{const b=e.target.closest('[data-ficha]');if(b&&!b.closest('.ficha')){e.preventDefault();ficha(b.dataset.ficha);}});
+
+  // ---------- Menú: marca la sección visible ----------
+  const enlaces=[...document.querySelectorAll('.menu a')];
+  const marcar=id=>enlaces.forEach(a=>a.classList.toggle('on',a.dataset.ir===id));
+  if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)marcar(e.target.id==='banner'?'inicio':e.target.id);}),{rootMargin:'-45% 0px -50% 0px'});
+    ['banner','apps','juegos','novedades'].forEach(id=>io.observe(document.getElementById(id)));}
+
+  fetch('productos.json',{cache:'no-cache'}).then(r=>r.json()).then(j=>{D={productos:j.productos||[],proximos:j.proximos||[],novedades:j.novedades||[]};banner();estantes();
+    const h=location.hash.slice(1);if(h&&prod(h))ficha(h);})
+    .catch(()=>{$('#estantes').innerHTML='<div class="sin" style="margin-top:40px">No se pudo cargar el catálogo. Recarga la página.</div>';});
 })();
 </script>
 </body>
